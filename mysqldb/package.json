@@ -1,0 +1,32 @@
+{
+  "name": "mysqldb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "connect-multiparty": "2.2.0",
+    "cors": "2.8.5",
+    "downloads-folder": "1.0.4",
+    "express": "4.17.1",
+    "file-saver": "2.0.2",
+    "firebase-admin": "8.12.1",
+    "googleapis": "51.0.0",
+    "jsonwebtoken": "8.5.1",
+    "mariadb": "2.3.1",
+    "moment": "2.25.3",
+    "multer": "1.4.2",
+    "mysql": "2.18.1",
+    "ng2-file-upload": "1.4.0",
+    "nodemailer": "6.4.6",
+    "peer": "0.5.3",
+    "socket.io": "2.3.0",
+    "uniqid": "5.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npx cross-env GOOGLE_APPLICATION_CREDENTIALS='D:/OFFICE/TrillUP/Maincode/Srujal/18052020/mysqldb/push-notification-testin-fb795-ecdf0b8213c7.json' nodemon index.js",
+    "start:srujal": "npx cross-env GOOGLE_APPLICATION_CREDENTIALS='/home/srujal/Downloads/push-notification-testin-fb795-ecdf0b8213c7.json' nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
