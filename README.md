@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Trillup
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
@@ -29,3 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # trillupnew
 >>>>>>> bb2d9e7dd82652c414cf62e2be2848f862bc5251
+=======
+# trillupnew
+>>>>>>> 6b878b90c9a34f2381e0f2bede107eb6c0652990
