@@ -1,0 +1,103 @@
+<section>
+       
+            <div class="list-inline ml-auto border-bottom links">
+                <a class="list-inline-item px-2" routerLink="/home/login" routerLinkActive="active">Login</a>
+                <a class="list-inline-item px-2" routerLink="/home/register" routerLinkActive="active">Create Account</a>
+            </div>
+            <div>
+                <h5>Create Account</h5>
+                <p class="sociak-links">please enter your information or use your<br>social media account</p>
+                <img src="../../../../../assets/images/google-logo.png" alt="google">
+                <img src="../../../../../assets/images/facebook-logo.png" alt="facebook" class="ml-4">
+            </div>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <label>Email address</label>
+                <div class="input-group form-group bg-light p-1 addradius">
+                    <div class="input-group-prepend bg-light">
+                        <span class="input-group-text"><i class="fa fa-envelope text-secondary"></i></span>
+                    </div>
+                    <input type="email" formControlName="email" class="form-control bg-light"
+                        [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                        placeholder="joe@example.com" />
+
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email  is required</div>
+                    </div>
+                </div>
+                <span *ngIf="this.errormsg" class="text-danger">{{this.errormsg}}</span>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Desired username</label>
+
+                        <div class=" input-group form-group bg-light p-1 addradius">
+                            <div class="input-group-prepend bg-light">
+                                <span class="input-group-text"><i class="fa fa-user text-secondary"></i></span>
+                            </div>
+                            <input type="text" formControlName="username" class="form-control bg-light"
+                                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">username Name is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Mobile Number</label>
+
+                        <div class=" input-group form-group bg-light p-1 addradius">
+                            <div class="input-group-prepend bg-light">
+                                <span class="input-group-text"><i class="fa fa-mobile text-secondary"></i></span>
+                            </div>
+                            <input type="tel" formControlName="mobile" class="form-control bg-light"
+                                [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+                            <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                                <div *ngIf="f.mobile.errors.required">Mobile Number is required</div>
+                                <div *ngIf="f.mobile.errors.pattern">Please Enter 10-digits</div>
+                            </div>
+                        </div>
+                    </div>
+                <span *ngIf="this.errormsg1" class="text-danger">{{this.errormsg1}}</span>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Password</label>
+
+                        <div class="form-group input-group bg-light p-1 addradius">
+                            <div class="input-group-prepend bg-light">
+                                <span class="input-group-text"><i class="fa fa-key text-secondary"></i></span>
+                            </div>
+                            <input type="password" formControlName="password" class="form-control bg-light"
+                                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                                <div *ngIf="f.password.errors.pattern">Invalid password. Please enter the password as suggested</div>
+                            </div>
+                        </div>
+                        <p class="password-limit">passwords must be atleast 8 characters in length and it must have lower case,upper
+                            case,numbers and a special characters</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Confirm Password</label>
+
+                        <div class="form-group input-group bg-light p-1 addradius">
+                            <div class="input-group-prepend bg-light">
+                                <span class="input-group-text"><i class="fa fa-key text-secondary"></i></span>
+                            </div>
+                            <input type="password" formControlName="confirmPassword" class="form-control bg-light"
+                                [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                            <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                                <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                                <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p>
+                        <button type="submit" class="btn">Register</button>
+                    </p>
+                    <p class="have-an-account">Already have an account?<a routerLink="/home/login">Login</a></p>
+                </div>
+            </form>
+</section>

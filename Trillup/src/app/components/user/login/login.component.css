@@ -1,0 +1,51 @@
+.input-group-text{
+    border:none;
+    background: none !important;
+}
+form{
+    width:80%;
+}
+[type="text"],[type="password"]{
+    border:none;
+    outline: none;
+
+}
+button{
+    border:none;
+    background-color: #2a71ba;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 30px;
+}
+[alt="google"],[alt="facebook"]{
+    height: 29px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 6px;
+}
+[type="text"]:focus,[type="password"]:focus {
+    box-shadow: none;
+}
+.addradius{
+    border-radius: 10px;
+}
+.links{
+    width:fit-content;
+}
+.links a {
+    text-decoration: none;
+    color: #111;
+}
+
+.active {
+    color: #2a71ba !important;
+    border-bottom: 1px solid #2a71ba;
+}
+section{
+    width: 100%;
+    margin-top: 60px;
+}
+label,p{
+    font-size: 13px;
+}

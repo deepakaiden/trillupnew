@@ -1,0 +1,31 @@
+<div class="links">
+      <img src="../../../../assets/images/trillup-logo.png" alt="logo" class="img-fluid w-100">
+      <ul class="p-0">
+            <li [routerLinkActive]="['active']">
+                  <a> <img src="../../../../assets/images/newsfeed icon.png">
+                       <span  routerLink="/newsfeed"> Newsfeed</span></a>
+            </li>
+            <li [routerLinkActive]="['active']">
+                  <a><img src="../../../../assets/images/02.png"><span routerLink="/teamchannel">Team
+                        Channel</span></a>
+            </li>
+            <li [routerLinkActive]="['active']">
+                  <a><img src="../../../../assets/images/webinar.png"><span
+                        routerLink="/webinar/webinar-home">Webinars</span></a></li>
+
+            <li [routerLinkActive]="['active']">
+                  <a>
+                        <img *ngIf="active" src="../../../../assets/images/coolaboration tools icon.png">
+                        <img *ngIf="!active" src="../../../../assets/images/webinar.png">
+                  
+                  <span routerLink="/collaboration-tools" >Collaboration Tools</span></a>
+            </li>
+            <li >
+                  <a><img src="../../../../assets/images/file sharing icon.png"><span
+                        >File Sharing</span></a>
+            </li>
+            <li [routerLinkActive]="['active']">
+                  <a class="mr-2"><img src="../../assets/images/document sharing icon.png"><span routerLink="/document-collaboration">Document Collaboration</span></a>
+            </li>
+      </ul>
+</div>

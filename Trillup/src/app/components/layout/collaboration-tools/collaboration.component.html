@@ -1,0 +1,123 @@
+<section >
+    <div class="row">
+        <div class="col-md-2 p-0 nav-links" >
+            <app-nav-links></app-nav-links>
+        </div>
+        <div class="col-md-10 main" >
+            <div class="row">
+                <ul class="col-md-10 " >
+                    <li class="d-inline ml-4"><a href="#">Chat</a></li>
+                    <li class="d-inline  ml-4"><a routerLink="audiocall" routerLinkActive="active">Audio Call</a></li>
+                    <li class="d-inline  ml-4"><a routerLink="videocall">Video Call</a></li>
+                    <li class="d-inline  ml-4"><a href="#">White Board</a></li><hr>
+                </ul>
+                <div class="col-md-2 profile" >
+                    <i class="fa fa-user-circle-o mr-4" aria-hidden="true" data-toggle="modal"
+                        data-target="#myModal" ></i>
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <router-outlet></router-outlet>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="users ">
+                        <p class="participants ml-2"><span class="ml-3"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span class="pl-3">Participants</span></p>
+                        <div *ngFor="let register of registerUsers"class="reg-users" >
+                            <p class="m-0">{{register.username}}</p>
+                            <p>{{register.email}}</p>
+
+                        </div>
+                        <div class="row">
+                             <div class="col-md-6 help">
+                              <p>Hey, I am here<br>to help!</p>
+                             </div>
+                             <div class="col-md-6">
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Update Users</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <label>Email address</label>
+                    <div class="input-group form-group bg-light p-1 addradius">
+                        <div class="input-group-prepend bg-light">
+                            <span class="input-group-text"><i class="fa fa-envelope text-secondary"></i></span>
+                        </div>
+                        <input type="email" formControlName="email" class="form-control bg-light"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="joe@example.com" />
+
+                        <!-- <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                        </div> -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Desired username</label>
+
+                            <div class=" input-group form-group bg-light p-1 addradius">
+                                <div class="input-group-prepend bg-light">
+                                    <span class="input-group-text"><i class="fa fa-user text-secondary"></i></span>
+                                </div>
+                                <input type="text" formControlName="username" class="form-control bg-light"
+                                    [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                                <!-- <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                    <div *ngIf="f.username.errors.required">username Name is required</div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Mobile Number</label>
+
+                            <div class=" input-group form-group bg-light p-1 addradius">
+                                <div class="input-group-prepend bg-light">
+                                    <span class="input-group-text"><i class="fa fa-mobile text-secondary"></i></span>
+                                </div>
+                                <input type="tel" formControlName="mobile" class="form-control bg-light"
+                                    [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+                                <!-- <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                                    <div *ngIf="f.mobile.errors.required">Mobile Number is required</div>
+                                    <div *ngIf="f.mobile.errors.pattern">Please Enter 10-digits</div>
+                                </div> -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <input type="file" class="form-control bg-light"
+                            [ngClass]="{ 'is-invalid': submitted && f.profile.errors }" (change)="uploadFile($event)">
+                    </div>
+                    <div >
+                        <input type="hidden" formControlName="id" class="form-control">
+                    </div>
+
+                    <div class="text-center">
+                        <p>
+                            <button type="submit">UPDATE</button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

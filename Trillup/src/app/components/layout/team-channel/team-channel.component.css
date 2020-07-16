@@ -1,0 +1,292 @@
+section {
+    overflow: hidden;
+    background-color: rgba(246, 246, 246, 1)
+}
+
+.cam {
+    margin: 0 30px;
+    color: #2a71ba;
+}
+
+.mobile {
+    color: #2a71ba
+}
+
+.username, .details {
+    color: #2a71ba;
+}
+
+[type="search"] {
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 20px;
+}
+
+[type="text"] {
+    background-color: rgba(246, 246, 246, 1);
+}
+
+.text {
+    margin: 0 15px;
+}
+
+.text [type="text"], .files [type="text"] {
+    border: 1px solid #d6e2f1;
+    width: 95%;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.close {
+    margin-top: -55px;
+    margin-right: 17px;
+    background-color: #407cc0;
+    color: white;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 1px solid #407cc0;
+    border-radius: 7px;
+}
+
+.button {
+    border: 1px solid #407cc0;
+    background-color: #407cc0;
+    color: white;
+    float: right!important;
+    margin: 23px 30px;
+    padding: 9px 40px;
+    border-radius: 12px;
+}
+
+.users {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    position: fixed;
+    width: 27%;
+    height: 100vh;
+    margin-top: 51px;
+}
+
+.modal-title {
+    padding: 25px 10px;
+}
+
+.nav-links {
+    background-color: white;
+    position: fixed;
+}
+
+.main {
+    margin-left: 230px;
+}
+
+.help p {
+    background-color: #2a71ba;
+    color: white;
+    padding: 9px 21px;
+    border-radius: 10px;
+}
+
+.msg {
+    border: 1px solid #407cc0;
+    padding: 20px 10px;
+    border-radius: 20px;
+}
+
+[type="text"] {
+    border: none;
+    outline: none;
+}
+
+.icons {
+    float: right;
+}
+
+.smile, .video, .camera, .attach {
+    margin-left: 50px;
+    color: #407cc0;
+    font-size: 20px;
+}
+
+.upload {
+    border: 1px solid #407cc0;
+    background-color: #407cc0;
+    color: white;
+    float: right!important;
+    margin: 2px -175px;
+    padding: 9px 40px;
+    border-radius: 12px;
+}
+
+.files {
+    margin: 24px 15px;
+}
+
+figure {
+    background-color: gray!important;
+    margin: 10px 38%;
+    padding: 20px;
+}
+
+figure img {
+    margin: 0 24%;
+}
+
+@media (min-width:768px) and (max-width:1024px) {}
+
+.fa-search {
+    /* position: absolute; */
+    position: relative;
+    /* left: 10px; */
+    right: 25px;
+    border: 1px solid black;
+    padding: 4px;
+    background-color: black;
+    color: white;
+}
+
+input[type="search"] {
+    border: 1px solid black;
+}
+
+textarea {
+    width: 100%;
+    height: 130px;
+}
+
+.side {
+    background-color: #2a71ba;
+    height: 100vh;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.message-link {
+    color: blue;
+}
+
+.message-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    /* background-color: #bbb; */
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*FILE DROP*/
+
+.app-title {
+    font-size: 24px;
+}
+
+.box-title {
+    font-size: 20px;
+}
+
+.box-container {
+    box-sizing: border-box;
+    width: 800px;
+    height: 500px;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 24px;
+    margin: 24px auto;
+    border-radius: 4px;
+    color: #555;
+    background-color: #eee;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18), 0 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.info-container {
+    padding: 12px 16px;
+    line-height: 24px;
+}
+
+.action-container, .content-container {
+    position: relative;
+    overflow: auto;
+    height: 300px;
+    min-height: 0;
+    padding: 16px;
+    margin: 8px 16px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.vertical-container, .horizontal-container {
+    min-height: 0 !important;
+}
+
+.action-button {
+    box-sizing: border-box;
+    width: calc(100% - 16px);
+    min-height: 35px;
+    padding: 4px 16px;
+    margin: 8px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+    text-align: center;
+}
+
+.action-button:hover {
+    color: #fff;
+    background-color: #555;
+}
+
+.dropzone-container {
+    height: 100%;
+}
+
+.dropbtn {
+    /* background-color: #4CAF50; */
+    color: white;
+    padding: 10px;
+    /* font-size: 16px; */
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.dropdown-content button:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

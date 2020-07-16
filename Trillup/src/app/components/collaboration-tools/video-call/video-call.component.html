@@ -1,0 +1,136 @@
+<section>
+
+    <div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+            <!-- Carousel indicators -->
+            <!-- <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol> -->
+            <!-- Wrapper for carousel items -->
+            <div class="carousel-inner">
+                <div class="item carousel-item active">
+                    <div class="row" style="margin-top: 69px;">
+                        <div *ngFor="let register of registerUsers" class="reg-users">
+                            <div class="col-md-3">
+
+                                <h4>{{register.username}}</h4>
+                                <p>24 hours ago</p>
+                                <button><i class="fa fa-video-camera" aria-hidden="true"><span class="ml-2">call</span></i></button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Carousel controls -->
+            <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+
+
+        <div class="ml-4 mb-4 text-center">
+            <p class="d-inline mr-4">All Calls</p>
+            <p class="d-inline mr-4">Missed</p>
+            <p class="d-inline mr-4">Outgoing</p>
+            <p class="d-inline mr-4">Answering</p>
+            <p class="d-inline mr-4">Recording</p>
+        </div>
+        <div class="row reg-user">
+            <div class="col-md-4" style="content:fit-content">
+                <div *ngFor="let register of registerUsers">
+                    <p class="m-0">{{register.username}}</p>
+                    <p style="font-size: 10px;">{{register.email}}</p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div>
+                    <p class="m-0">11</p>
+                    <p style="font-size: 10px;">today</p>
+                </div>
+
+                <div>
+                    <p class="m-0">11</p>
+                    <p style="font-size: 10px;">today</p>
+                </div>
+                <div>
+                    <p class="m-0">11</p>
+                    <p style="font-size: 10px;">today</p>
+                </div>
+                <div>
+                    <p class="m-0">11</p>
+                    <p style="font-size: 10px;">today</p>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div>
+                    <p>2</p>
+                </div>
+                <div>
+                    <p>2</p>
+                </div>
+                <div>
+                    <p>2</p>
+                </div>
+                <div>
+                    <p>2</p>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div>
+                    <p>4</p>
+                </div>
+                <div>
+                    <p>4</p>
+                </div>
+                <div>
+                    <p>4</p>
+                </div>
+                <div>
+                    <p>4</p>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div>
+                    <p>1</p>
+                </div>
+                <div>
+                    <p>1</p>
+                </div>
+                <div>
+                    <p>1</p>
+                </div>
+                <div>
+                    <p>1</p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div>
+                    <button class="button"><i class="fa fa-video-camera" aria-hidden="true"><span class="ml-2">call</span></i></button>
+                </div>
+
+                <div>
+                    <button class="button"><i class="fa fa-video-camera" aria-hidden="true"><span class="ml-2">call</span></i></button>
+                </div>
+                <div>
+                    <button class="button"><i class="fa fa-video-camera" aria-hidden="true"><span class="ml-2">call</span></i></button>
+                </div>
+                <div>
+                    <button class="button"><i class="fa fa-video-camera" aria-hidden="true"><span class="ml-2">call</span></i></button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</section>

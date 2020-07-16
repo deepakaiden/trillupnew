@@ -1,0 +1,50 @@
+<section>
+
+    <div class="list-inline ml-auto border-bottom links">
+        <a class="list-inline-item px-2" routerLink="/home/login" routerLinkActive="active">Login</a>
+        <a class="list-inline-item px-2" routerLink="/home/register" routerLinkActive="active">Create Account</a>
+    </div>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h5>Login</h5>
+
+        <label>Email address or Mobile Number</label>
+        <div class="input-group form-group bg-light p-1 addradius">
+            <div class="input-group-prepend bg-light">
+                <span class="input-group-text"><i class="fa fa-envelope text-secondary"></i></span>
+            </div>
+            <input type="text" formControlName="emailormobile" class="form-control bg-light"
+                [ngClass]="{ 'is-invalid': submitted && f.emailormobile.errors }"
+                placeholder="joe@example.com or 98765432" />
+            <div *ngIf="submitted && f.emailormobile.errors" class="invalid-feedback">
+                <div *ngIf="f.emailormobile.errors.required">Email or Mobile Number is required</div>
+            </div>
+        </div>
+        <span *ngIf="this.errormsg" class="text-danger">{{this.errormsg}}</span>
+        <div>
+            <label>Password</label>
+            <div class="input-group form-group bg-light p-1 addradius">
+                <div class="input-group-prepend bg-light">
+                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                </div>
+                <input type="password" formControlName="password" class="form-control bg-light"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                </div>
+            </div>
+            <span *ngIf="this.errormsg1" class="text-danger">{{this.errormsg1}}</span>
+            <p>Don't have an account yet? <span><a rourerLink="/home/register">Register Now</a></span></p>
+            <div class="text-center">
+                <p><button>LOGIN</button><span class="ml-4"><a routerLink="/home/forgot-password">Forget
+                            Password</a></span></p>
+            </div>
+            <div class="text-center">
+                <p>or signin with social accounts</p>
+                <!-- <p><i class="fa fa-google"></i><span><i class="fa fa-facebook"></i></span></p> -->
+                <img src="../../../../../assets/images/google-logo.png" alt="google">
+                <img src="../../../../../assets/images/facebook-logo.png" alt="facebook" class="ml-4">
+            </div>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,38 @@
+.nav-links{
+    background-color: white; 
+    position: fixed;
+}
+.main{
+    margin-left: 230px;
+}
+.users{
+    background-color: white;
+    border-radius: 10px;
+    padding:10px;position:fixed;
+    width:27%;
+    height: 100vh;
+    margin-top: 51px;
+}
+.profile{
+    margin-top: 55px;
+    margin-left: 200px;
+}
+section{
+    overflow:hidden;
+    background-color:rgba(246,246,246,1)
+}
+[type="search"]{
+    width:75%;
+    border: 1px solid#407cc0;
+    padding: 10px 30px;
+    border-radius: 22px;
+}
+
+.send{
+    /* margin-left: 375px; */
+    border:1px solid #407cc0;
+    background-color: #407cc0;
+    padding:10px 30px;
+    border-radius: 10px;
+    color:white;
+}

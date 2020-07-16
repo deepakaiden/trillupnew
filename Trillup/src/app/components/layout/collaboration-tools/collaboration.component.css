@@ -1,0 +1,75 @@
+li{
+    list-style: none;
+}
+.participants{
+	padding: 5px;
+    border: 1px solid rgba(246,246,246,1);
+    margin-top: 24px;
+    background-color:rgba(246,246,246,1);
+    border-radius: 25px;
+    width:69%;
+}
+section{
+    overflow:hidden;
+    background-color:rgba(246,246,246,1)
+}
+ul{
+    padding-top: 60px;
+    padding-left: 156px; 
+}
+.profile{
+    margin-top: 55px;
+}
+.users{
+    background-color: white;
+    border-radius: 10px;
+    padding:10px;position:fixed;
+    width:27%;
+    height: 100vh;
+}
+ul li a{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    color: rgba(0,0,0,1);
+    letter-spacing: 0.22px;
+}
+.reg-users p:first-child{
+    color:#2a71ba;
+    padding-left: 56px;
+}
+
+.reg-users p:last-child{
+    padding-left: 56px;
+    font-size: 10px;
+}
+hr{
+    width: 445px;
+    margin-left: 49px;
+    margin-top: 33px;
+}
+.nav-links{
+    background-color: white; 
+    position: fixed;
+}
+.main{
+    margin-left: 230px;
+}
+.help p{
+    background-color: #2a71ba;
+    color:white;
+    padding:9px 21px;
+    border-radius: 10px;
+}
+@media (min-width:768px) and (max-width:1024px){
+    .main{
+        margin-left: 122px!important;
+    }
+    ul{
+        padding-left: 13px!important;
+    }
+    .participants{
+        width:85%!important;
+    }
+}

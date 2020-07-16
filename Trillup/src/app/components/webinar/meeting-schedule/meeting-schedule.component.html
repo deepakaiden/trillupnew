@@ -1,0 +1,172 @@
+<section>
+    <!-- <div class="row mt-4"> -->
+        
+        <div class="col-md-10" style="margin-top: 40px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Schedule Meeting</h6>
+                </div>
+                <div class="col-md-6">
+                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                    <i class="fa fa-bell-o ml-4" aria-hidden="true"></i>
+                </div>
+            </div>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <!-- topic start -->
+                    <div class="col-md-8">
+                        <label class="mt-2 mb-2">Topic</label>
+                        <input type="text" formControlName="topic" class="form-control topic"
+                            [ngClass]="{ 'is-invalid': submitted && f.topic.errors }" />
+                        <div *ngIf="submitted && f.topic.errors" class="invalid-feedback bg-light">
+                            <div *ngIf="f.topic.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <!-- topic end -->
+                    <!-- add conference start -->
+                    <div class="col-md-4 ">
+                        <label class="mt-2 mb-2">Add Conference Room</label>
+                        <input type="text" formControlName="conference" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.conference.errors }" />
+                        <div *ngIf="submitted && f.conference.errors" class="invalid-feedback">
+                            <div *ngIf="f.conference.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <!-- add conference end -->
+                </div>
+                <div class="row">
+                    <!-- description end -->
+                    <div class="col-md-8">
+                        <label class="mt-2 mb-2">Description</label>
+                        <input type="text" formControlName="description" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                        <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                            <div *ngIf="f.description.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <!-- description start -->
+                    <!-- add members start -->
+                    <div class="col-md-4 ">
+                        <label class="mt-2 mb-2">Add Members</label>
+                        <select formControlName="members" class="form-control add-members"
+                            [ngClass]="{ 'is-invalid': submitted && f.members.errors }">
+                            <option value=""></option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Ms">Ms</option>
+                        </select>
+                        <div *ngIf="submitted && f.members.errors" class="invalid-feedback">
+                            <div *ngIf="f.members.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <!-- add members end -->
+                </div>
+
+
+                <!-- date and time start -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="mt-2 mb-2">Date</label>
+                        <input type="date" formControlName="date" class="form-control date"
+                            [ngClass]="{ 'is-invalid': submitted && f.date.errors }" />
+                        <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                            <div *ngIf="f.date.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="mt-2 mb-2">Time</label>
+                        <div class="d-inline">
+                            <input type="time" formControlName="time" class="form-control time"
+                                [ngClass]="{ 'is-invalid': submitted && f.time.errors }" />
+                            <div *ngIf="submitted && f.time.errors" class="invalid-feedback">
+                                <div *ngIf="f.time.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- date and time end -->
+
+
+                <!-- duration start -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="mt-2 mb-2">duration</label><br>
+
+                        <div class="row">
+
+                            <div class="col-md-3 mr-4">
+                                <select class="form-control duration">
+                                    <!-- <option value=""></option> -->
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+
+                            </div>
+                            <div class="col-md-3">
+                                <select class="form-control duration">
+                                    <!-- <option value=""></option> -->
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- time zone start -->
+                    <div class="col-md-6">
+                        <label class="mt-2 mb-2">Time Zone</label>
+                        <select formControlName="timezone" class="form-control timezone"
+                            [ngClass]="{ 'is-invalid': submitted && f.timezone.errors }">
+                            <option value=""></option>
+                            <option value="Mr">1</option>
+                            <option value="Mrs">2</option>
+                            <option value="Miss">3</option>
+                            <option value="Ms">4</option>
+                        </select>
+                        <div *ngIf="submitted && f.timezone.errors" class="invalid-feedback">
+                            <div *ngIf="f.timezone.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <!-- time zone end -->
+                </div>
+                <!-- duration end -->
+
+
+
+
+                <!-- video label start -->
+
+                <div>
+                    <label class="mt-2 mb-2">Video</label>
+                    <div>
+                        <label>Host</label>
+                        <input type="radio" value="on" name="host" class="host"> <span class="ml-2">on</span>
+                        <input type="radio" value="off" name="host" class="host1"><span class="ml-2">off</span>
+                    </div>
+                    <div>
+                        <label class="mt-2 mb-2">Attendee</label>
+                        <input type="radio" value="on" name="host" class="ml-4"> <span class="ml-2">on</span>
+                        <input type="radio" value="off" name="host" class="ml-4"><span class="ml-2">off</span>
+                    </div>
+                </div>
+
+                <!-- video label end -->
+                <div class="text-center">
+                    <button class="next mr-4">Next</button>
+                    <button>Cancel</button>
+                </div>
+                
+            </form>
+        </div>
+
+    <!-- </div> -->
+</section>
+
+

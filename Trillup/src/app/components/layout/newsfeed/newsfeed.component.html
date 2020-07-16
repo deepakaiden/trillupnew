@@ -1,0 +1,103 @@
+<section>
+    <div class="row">
+        <div class="col-md-2 p-0 nav-links">
+            <app-nav-links></app-nav-links>
+        </div>
+        <div class="col-md-10 main">
+            <div class="row">
+                <div class="col-md-8 msg mt-4">
+
+                    <p class="d-inline " data-toggle="modal" data-target="#myModal1">hello,<b>trillup</b><br>Please type
+                        something here.</p>
+
+                    <span class="d-inline videocamera"><i class="fa fa-video-camera" aria-hidden="true"></i></span>
+                    <span class="d-inline cam"><i class="fa fa-camera" aria-hidden="true" data-toggle="modal"
+                            data-target="#myModal1"></i></span>
+
+
+                </div>
+                <div class="col-md-4 profile">
+                    <i class="fa fa-user-circle-o mr-4" aria-hidden="true" data-toggle="modal"
+                        data-target="#myModal"></i>
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8" *ngFor=" let img of images" style="height: 50%;">
+                    <div class="mt-4" style="background-color: white;border-radius:10px">
+                        <p class="p-4">{{img.message}}</p>
+
+                        <img src={{img.image}} class="w-100" style="height:50%">
+                        <div class="pb-4 pt-4">
+                            <img src="../../../../assets/images/selected like icon.png" alt="like" class="ml-4 mr-4">
+                            <img src="../../../../assets/images/comment icon.png" alt="comment" class="ml-4"(click)="showSubItem(index)">
+                            <img src="../../../../assets/images/selected save post icon.png" alt="save">
+                            <div class="row" *ngIf="visibleIndex === index">
+                                <div class="col-md-2">
+                                </div>
+                                <form class="col-md-6">
+                                    <input type="text" placeholder="type here" class="comment-text">
+                                </form>
+                                <div class="col-md-4">
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-4 ">
+
+
+                    <div class="users ml-2">
+                        <span class="pl-3">
+                            <h5>Your Groups</h5>
+                        </span>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+</section>
+
+
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <img src="../../../../assets/images/facebook-logo.png" alt="fb">
+                <input type="text" placeholder="type something here" formControlName="message" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.message.errors }">
+                <div class="icons">
+                    <span class="smile"><i class="fa fa-smile-o" aria-hidden="true"></i></span>
+                    <span class="video"><i class="fa fa-video-camera" aria-hidden="true"></i></span>
+                    <label for="upload-photo" class="camera"><i class="fa fa-camera" aria-hidden="true"></i></label>
+                    <input type="file" id="upload-photo" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.image.errors }" (change)="uploadFile($event)">
+                    <span class="camera"><img src="../../../../assets/images/everest.png" alt="everest"></span>
+                    <button class="send" type="submit">Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

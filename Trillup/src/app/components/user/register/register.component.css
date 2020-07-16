@@ -1,0 +1,58 @@
+section{
+    /* overflow: hidden; */
+    width:100%;
+    margin-top: 60px;
+}
+[alt="google"],[alt="facebook"]{
+    height: 29px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 6px;
+}
+button{
+    border:none;
+    background-color: #2a71ba;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 30px;
+}
+.addradius{
+    border-radius: 10px;
+}
+.input-group-text{
+    border:none;
+    background: none !important;
+}
+[type="email"],[type="text"],[type="tel"],[type="password"]{
+    border:none;
+    box-shadow: none;
+}
+.form-group{
+    width:80%;
+}
+.links{
+    width: fit-content;
+}
+.links a {
+    text-decoration: none;
+    color: #111;
+}
+
+.active {
+    color: #2a71ba !important;
+    border-bottom: 1px solid #2a71ba;
+}
+label{
+    font-size: 13px;
+}
+.sociak-links{
+    font-size: 12px;
+    margin:0;
+}
+.have-an-account{
+    font-size: 13px;
+}
+.password-limit{
+    font-size: 10px;
+}
